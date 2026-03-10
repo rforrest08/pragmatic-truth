@@ -5,6 +5,11 @@ import { getAllArticles, getAllResources } from "@/lib/mdx";
 
 export const revalidate = 0;
 
+export const metadata = {
+  title: 'Pragmatic Truth | Truth Made Practical',
+  description: 'Equipping everyday Christians with biblically grounded responses to life, culture, current events, and hard questions.',
+};
+
 export default function Home() {
   const recentArticles = getAllArticles().slice(0, 2);
   const featuredResources = getAllResources().filter(r => r.frontmatter.featured).slice(0, 1);
