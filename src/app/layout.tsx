@@ -17,12 +17,12 @@ const lora = Lora({
 export const metadata: Metadata = {
   title: {
     template: "%s | Pragmatic Truth",
-    default: "Pragmatic Truth | Christian Financial Advisory",
+    default: "Pragmatic Truth | Truth Made Practical",
   },
-  description: "Biblical principles for modern financial stewardship.",
+  description: "Equipping everyday Christians with biblically grounded responses to life, culture, current events, and hard questions.",
   openGraph: {
     title: "Pragmatic Truth",
-    description: "Biblical principles for modern financial stewardship.",
+    description: "Equipping everyday Christians with biblically grounded responses to life, culture, current events, and hard questions.",
     locale: "en_US",
     type: "website",
   },
