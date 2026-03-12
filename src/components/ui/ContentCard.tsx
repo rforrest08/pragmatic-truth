@@ -5,7 +5,7 @@ interface ContentCardProps {
   excerpt: string;
   href: string;
   category?: string;
-  date: string;
+  date?: string;
   imageUrl?: string;
 }
 
@@ -21,7 +21,7 @@ export function ContentCard({ title, excerpt, href, category, date, imageUrl }: 
       <div className="p-6 flex flex-col h-[calc(100%-12rem)]">
         <div className="flex items-center gap-3 mb-3 text-xs font-semibold text-slate-500 dark:text-slate-400">
           {category && <span className="text-secondary dark:text-emerald-400 uppercase tracking-wider">{category}</span>}
-          <span>{new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          {date && <span>{new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>}
         </div>
         <h3 className="text-xl font-serif font-bold text-slate-950 dark:text-white mb-2 group-hover:text-primary transition-colors">
           {title}

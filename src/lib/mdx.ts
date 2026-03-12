@@ -10,12 +10,12 @@ const mediaDirectory = path.join(contentDirectory, 'media');
 export interface BaseFrontmatter {
   title: string;
   slug: string;
-  date: string;
+  date?: string;
   updatedAt?: string;
   tags: string[];
   excerpt: string;
   featured: boolean;
-  author: string;
+  author?: string;
   scripture?: string[];
   views?: number;
   coverImage?: string;
@@ -25,6 +25,8 @@ export interface BaseFrontmatter {
 export interface ArticleFrontmatter extends BaseFrontmatter {
   type: 'article';
   relatedResources?: string[];
+  date: string; // Maintain required for articles
+  author: string; // Maintain required for articles
 }
 
 export interface ResourceFrontmatter extends BaseFrontmatter {
@@ -37,6 +39,8 @@ export interface MediaFrontmatter extends BaseFrontmatter {
   type: 'media';
   mediaType: 'audio' | 'video';
   embedUrl: string;
+  date: string; // Maintain required for media
+  author: string; // Maintain required for media
 }
 
 export type ContentFrontmatter = ArticleFrontmatter | ResourceFrontmatter | MediaFrontmatter;
@@ -49,15 +53,15 @@ export interface MDXDocument<T extends ContentFrontmatter> {
 const parseFrontmatter = <T extends ContentFrontmatter>(data: { [key: string]: any }, filename: string, type: 'article' | 'resource' | 'media'): T => {
   const slug = data.slug || filename.replace(/\.mdx?$/, '');
   
-  const base: BaseFrontmatter = {
+  const base = {
     title: data.title || 'Untitled',
     slug,
-    date: data.date ? new Date(data.date).toISOString() : new Date().toISOString(),
+    date: data.date ? new Date(data.date).toISOString() : (type !== 'resource' ? new Date().toISOString() : undefined),
     updatedAt: data.updatedAt ? new Date(data.updatedAt).toISOString() : undefined,
     tags: data.tags || [],
     excerpt: data.excerpt || '',
     featured: data.featured === true,
-    author: data.author || 'ryan-forrest', // Default fallback
+    author: data.author || (type !== 'resource' ? 'ryan-forrest' : undefined),
     scripture: data.scripture,
     views: data.views,
     coverImage: data.coverImage,
@@ -140,8 +144,12 @@ export function getAllResources(): MDXDocument<ResourceFrontmatter>[] {
     };
   });
 
-  // Sort resources by date descending
-  return resources.sort((a, b) => (new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()));
+  // Sort resources by date descending, default to 0 for undefined dates
+  return resources.sort((a, b) => {
+    const timeA = a.frontmatter.date ? new Date(a.frontmatter.date).getTime() : 0;
+    const timeB = b.frontmatter.date ? new Date(b.frontmatter.date).getTime() : 0;
+    return timeB - timeA;
+  });
 }
 
 export function getResourceBySlug(slug: string): MDXDocument<ResourceFrontmatter> | null {
