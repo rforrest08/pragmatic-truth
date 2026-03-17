@@ -106,6 +106,7 @@ export function ContentFilter({ items, basePath }: ContentFilterProps) {
                href={href}
                date={item.frontmatter.date}
                category={item.frontmatter.type === 'media' ? item.frontmatter.mediaType?.toUpperCase() : (item.frontmatter.tags?.[0] || 'Article')}
+               imageUrl={'image' in item.frontmatter ? item.frontmatter.image : item.frontmatter.coverImage}
              />
            );
         })}

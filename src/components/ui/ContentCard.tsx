@@ -37,11 +37,11 @@ export function ContentCard({ title, excerpt, href, category, date, imageUrl }: 
             className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500" 
           />
         </div>
-      ) : imageUrl && imgError ? (
+      ) : (
         <div className="w-full h-40 bg-slate-100 dark:bg-slate-800 flex items-center justify-center border-b border-slate-200 dark:border-slate-800">
           <span className="text-4xl font-serif font-bold text-primary opacity-50">{getInitials(title)}</span>
         </div>
-      ) : null}
+      )}
       <div className="p-6 flex flex-col h-[calc(100%-10rem)]">
         <div className="flex items-center gap-3 mb-3 text-xs font-semibold text-slate-500 dark:text-slate-400">
           {category && <span className="text-secondary dark:text-emerald-400 uppercase tracking-wider">{category}</span>}
