@@ -13,7 +13,7 @@ export function Header() {
           <Link href="/articles" className="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white">Articles</Link>
           <Link href="/resources" className="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white">Resources</Link>
           <Link href="/media" className="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white">Media</Link>
-          <Link href="/ask" className="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white">Ask a Question</Link>
+          <Link href="/qr" className="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white">Q&R</Link>
           <ThemeToggle />
           <Link href="/contact" className="text-sm font-medium bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-light transition-colors">Contact</Link>
         </nav>

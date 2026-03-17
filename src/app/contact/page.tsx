@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Button } from '@/components/ui/Button';
+import { ContactForm } from './ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -27,7 +27,7 @@ export default function ContactPage() {
               Please use this form for general inquiries, speaking requests, or feedback on our content. 
             </p>
             <p className="text-slate-600 dark:text-slate-300 mb-8 text-sm">
-              If you have a specific theological or biblical question you'd like us to answer in an article, please use our <a href="/ask" className="text-primary hover:underline font-bold">Ask a Question</a> form instead.
+              If you have a specific theological or biblical question you'd like us to respond to in an article, please use our <a href="/qr" className="text-primary hover:underline font-bold">Q&R</a> form instead.
             </p>
             
             <div className="space-y-4 mb-8 text-slate-700 dark:text-slate-300 text-sm">
@@ -39,24 +39,7 @@ export default function ContactPage() {
           </div>
           
           <div className="md:col-span-3 bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800">
-            <form className="space-y-5">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Name</label>
-                <input type="text" id="name" className="w-full px-4 py-2 border border-slate-300 dark:border-slate-700 rounded-md focus:ring-2 focus:ring-primary focus:border-primary bg-white dark:bg-slate-950 text-slate-900 dark:text-white" required />
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Email Address</label>
-                <input type="email" id="email" className="w-full px-4 py-2 border border-slate-300 dark:border-slate-700 rounded-md focus:ring-2 focus:ring-primary focus:border-primary bg-white dark:bg-slate-950 text-slate-900 dark:text-white" required />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Message</label>
-                <textarea id="message" rows={5} className="w-full px-4 py-2 border border-slate-300 dark:border-slate-700 rounded-md focus:ring-2 focus:ring-primary focus:border-primary bg-white dark:bg-slate-950 text-slate-900 dark:text-white" required></textarea>
-              </div>
-              
-              <Button type="button" className="w-full">Send Message</Button>
-            </form>
+            <ContactForm />
           </div>
           
         </div>

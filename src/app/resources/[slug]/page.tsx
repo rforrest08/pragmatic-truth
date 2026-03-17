@@ -61,7 +61,7 @@ export default async function ResourcePage({ params }: { params: Promise<{ slug:
         <div className="mt-16 pt-10 border-t border-slate-200 dark:border-slate-800 text-center">
           <h3 className="text-2xl font-serif font-bold mb-4 text-slate-900 dark:text-white">Have Questions?</h3>
           <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-md mx-auto">Submit your questions about this topic to our team for a future article.</p>
-          <Button href="/ask" variant="outline" size="lg">Ask a Question</Button>
+          <Button href="/qr" variant="outline" size="lg">Q&R</Button>
         </div>
       </article>
     </div>

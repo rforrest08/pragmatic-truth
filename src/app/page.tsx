@@ -108,13 +108,13 @@ export default function Home() {
       {/* Newsletter CTA */}
       <section className="py-24 bg-primary text-white text-center px-4 w-full">
         <div className="container mx-auto max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Stay Grounded in Truth</h2>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Stay in the Loop</h2>
           <p className="text-lg md:text-xl text-primary-light mb-10">
-            Join thousands of believers receiving weekly biblical exegesis and cultural commentary straight to their inbox.
+            Get notified when new articles, resources, and videos are published. No newsletters — just content worth your time.
           </p>
           <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input type="email" placeholder="Email address" className="px-4 py-3 rounded-md text-slate-900 flex-grow focus:outline-none focus:ring-2 focus:ring-secondary" required />
-            <Button size="lg" variant="secondary" type="submit">Subscribe</Button>
+            <input type="email" placeholder="Your email address" className="px-4 py-3 rounded-md text-slate-900 flex-grow focus:outline-none focus:ring-2 focus:ring-secondary" required />
+            <Button size="lg" variant="secondary" type="submit">Subscribe for Updates</Button>
           </form>
         </div>
       </section>

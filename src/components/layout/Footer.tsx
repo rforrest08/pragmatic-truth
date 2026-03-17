@@ -18,19 +18,19 @@ export function Footer() {
             <li><Link href="/about" className="hover:text-white transition">About the Mission</Link></li>
             <li><Link href="/articles" className="hover:text-white transition">Articles & Commentary</Link></li>
             <li><Link href="/resources" className="hover:text-white transition">Evergreen Resources</Link></li>
-            <li><Link href="/ask" className="hover:text-white transition">Ask a Question</Link></li>
+            <li><Link href="/qr" className="hover:text-white transition">Q&R</Link></li>
           </ul>
         </div>
         <div>
-          <h4 className="font-bold text-white mb-4">Join our Newsletter</h4>
-          <p className="text-sm mb-4">Get weekly insights and biblical exegesis sent directly to your inbox.</p>
+          <h4 className="font-bold text-white mb-4">Stay in the Loop</h4>
+          <p className="text-sm mb-4">Get notified when new articles, resources, and videos are published. No newsletters — just content worth your time.</p>
           <form className="flex gap-2">
             <input 
               type="email" 
               placeholder="Your email address" 
               className="px-3 py-2 bg-slate-800 border-none rounded-md flex-1 focus:ring-2 focus:ring-primary text-white"
             />
-            <Button type="button">Subscribe</Button>
+            <Button type="button">Subscribe for Updates</Button>
           </form>
         </div>
       </div>
