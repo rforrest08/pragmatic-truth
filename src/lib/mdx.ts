@@ -33,6 +33,7 @@ export interface ResourceFrontmatter extends BaseFrontmatter {
   type: 'resource';
   url?: string;
   downloadUrl?: string;
+  image?: string;
 }
 
 export interface MediaFrontmatter extends BaseFrontmatter {
@@ -74,6 +75,7 @@ const parseFrontmatter = <T extends ContentFrontmatter>(data: { [key: string]: a
       type: 'resource',
       url: data.url,
       downloadUrl: data.downloadUrl,
+      image: data.image,
     } as T;
   }
 
