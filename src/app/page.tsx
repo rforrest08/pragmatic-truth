@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/Button";
 import { ContentCard } from "@/components/ui/ContentCard";
 import { SocialFeed } from '@/components/social/SocialFeed';
+import { ScriptureTooltip } from '@/components/ui/ScriptureTooltip';
 import { getAllArticles, getAllResources } from "@/lib/mdx";
 
 export const revalidate = 0;
@@ -53,7 +54,7 @@ export default function Home() {
               <span className="font-serif text-3xl font-bold text-white leading-tight mb-8">
                 “Always be prepared to give an answer to everyone who asks you to give the reason for the hope that you have.”
               </span>
-              <span className="text-xl font-sans font-medium text-slate-200">- 1 Peter 3:15</span>
+              <span className="text-xl font-sans font-medium text-slate-200">- <ScriptureTooltip reference="1 Peter 3:15" /></span>
             </div>
           </div>
         </div>

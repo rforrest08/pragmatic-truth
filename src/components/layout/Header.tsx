@@ -10,6 +10,7 @@ export function Header() {
         </Link>
         <nav className="hidden md:flex gap-6 items-center">
           <Link href="/about" className="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white">About</Link>
+          <Link href="/statement-of-faith" className="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white">Statement of Faith</Link>
           <Link href="/articles" className="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white">Articles</Link>
           <Link href="/resources" className="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white">Resources</Link>
           <Link href="/media" className="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white">Media</Link>

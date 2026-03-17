@@ -16,6 +16,7 @@ export function Footer() {
           <h4 className="font-bold text-white mb-4">Quick Links</h4>
           <ul className="space-y-2 text-sm">
             <li><Link href="/about" className="hover:text-white transition">About the Mission</Link></li>
+            <li><Link href="/statement-of-faith" className="hover:text-white transition">Statement of Faith</Link></li>
             <li><Link href="/articles" className="hover:text-white transition">Articles & Commentary</Link></li>
             <li><Link href="/resources" className="hover:text-white transition">Evergreen Resources</Link></li>
             <li><Link href="/qr" className="hover:text-white transition">Q&R</Link></li>

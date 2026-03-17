@@ -1,0 +1,7 @@
+e90ef1e Turnstile bot protection, Q&R rename, notification signup copy update
+1d658c8 Add dark/light mode toggle
+e6b7cbc Add 7 external resources and make date/author optional on ResourceFrontmatter
+8895377 Add explicit metadata to home page
+8b792d5 Force revalidation on home page
+db0b7ea Fix site title and description metadata
+4abaf55 Initial commit
